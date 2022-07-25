@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>websocket demo</title>
+</head>
+<body>
+<h1></h1>
+<br>
+<input type='text' id='sendText'>
+<button onclick='send()'>send</button>
+</body>
+</html>
+<script>
+    const ws = new WebSocket('ws://127.0.0.1:8000/websocketTestOne') // 监听里约的站点
+    ws.onopen = function () {
+        console.log('服务器连接')
+    }
+    ws.onmessage = (msg) => {
+        console.log('来自服务器发来的数据：', msg)
+        alert('服务器返回内容：' + msg.data)
+    }
+    ws.onerror = (err) =>{
+        console.log(err)
+    }
+
+    ws.onclose = () => {
+        console.log('服务器关闭')
+    }
+
+    function send() {
+        if (ws) {
+            let msg = document.getElementById('sendText').value;
+            console.dir(ws)
+            ws.send(msg)
+        } else {
+            alert('websocket server error')
+        }
+    }
+</script>

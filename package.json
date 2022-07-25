@@ -1,0 +1,7 @@
+{
+  "name": "ike_httpToWebSocket",
+  "version": "1.0.0",
+  "dependencies": {
+    "ws": "^8.8.1"
+  }
+}
