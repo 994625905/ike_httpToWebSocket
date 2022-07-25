@@ -68,7 +68,7 @@ wsServer.on('connection', function (server) {
     </body>
 </html>
 <script>
-    const ws = new WebSocket('ws://127.0.0.1:3000/websocket') // 监听里约的站点
+    const ws = new WebSocket('ws://127.0.0.1:3000/websocket')
     ws.onopen = function () {
         console.log('服务器连接')
     }
