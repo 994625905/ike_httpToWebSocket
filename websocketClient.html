@@ -11,7 +11,7 @@
 </body>
 </html>
 <script>
-    const ws = new WebSocket('ws://127.0.0.1:8000/websocketTestOne') // 监听里约的站点
+    const ws = new WebSocket('ws://127.0.0.1:8000/websocketTestOne') // http代理的地址
     ws.onopen = function () {
         console.log('服务器连接')
     }
@@ -24,6 +24,7 @@
     }
 
     ws.onclose = () => {
+
         console.log('服务器关闭')
     }
 
