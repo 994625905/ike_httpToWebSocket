@@ -95,8 +95,7 @@ wsServer.on('connection', function (server) {
 ## 2.3、建立连接
 
 先启动websocket server，然后浏览器请求websocket client页面，抓包请求如下：
-
-![image-20220722172017601](/Users/wangjinchao/Library/Application Support/typora-user-images/image-20220722172017601.png)
+<img width="923" alt="zhuabao" src="https://user-images.githubusercontent.com/37284463/180917251-6e13f812-746a-4b6b-b6f7-5ba41037ffec.png">
 
 ### 2.3.1、tcp的三次握手
 
